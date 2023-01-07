@@ -18,6 +18,10 @@ variable "check_delivery_status_function_name" {
   default = "pickmeCheckDeliveryStatusFunction"
 }
 
+variable "change_order_status_function_name" {
+  default = "pickmeChangeOrderStatusTFFunction"
+}
+
 variable "delivery_handler_name" {
   default = "org.pickme.DeliveryHandler::handleRequest"
 }

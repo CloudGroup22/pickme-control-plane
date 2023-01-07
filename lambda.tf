@@ -56,3 +56,13 @@ resource "aws_lambda_function" "orders_lambda_function" {
   timeout       = 15
   memory_size   = 512
 }
+
+resource "aws_lambda_function" "change_order_status_lambda_function" {
+  function_name = var.change_order_status_function_name
+  filename      = var.fileName
+  role          = aws_iam_role.lambda_role.arn
+  handler       = var.order_handler_name
+  runtime       = "java8"
+  timeout       = 15
+  memory_size   = 512
+}
